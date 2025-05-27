@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Kalkulators</h1>
+    <form method="POST">
+        <input type="number" name="num1" required placeholder="Pirmais skaitlis">
+        <input type="number" name="num2" required placeholder="Otrais skaitlis">
+        <select name="operation">
+            <option value="add">Saskaitīšana</option>
+            <option value="subtract">Atņemšana</option>
+            <option value="multiply">Reizināšana</option>
+            <option value="divide">Dalīšana</option>
+        </select>
+        <button type="submit">Aprēķināt</button>
+    </form>
+    {% if result is not none %}
+        <h2>Rezultāts: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
